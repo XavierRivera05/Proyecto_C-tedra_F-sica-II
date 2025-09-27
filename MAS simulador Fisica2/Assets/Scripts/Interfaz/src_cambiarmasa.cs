@@ -22,31 +22,30 @@ public class src_cambiarmasa : MonoBehaviour
     //switch para mantener un orden en los 3 casos
     switch (opcion)
     {
-        case 0:  //Masa pequeña
-        masimulador.masa = 0.5f; //cambiando valor de la masa (usando variable del otro script)
-        nuevaEscala = new Vector3(0.7f, 0.7f, 1f); //dimensiones de la masa en los ejes + vector3 pa su posición
+        case 0:  //Masa mediana
+        masimulador.masa = 1f; //cambiando valor de la masa (usando variable del otro script)
+        masimulador.ActualizarMasita(masimulador.masa);
+        nuevaEscala = new Vector3(1f, 1f, 1f); //dimensiones de la masa en los ejes + vector3 pa su posición
         break;
 
-        case 1: //Masa mediana
-        masimulador.masa = 5.0f;
-        nuevaEscala = new Vector3(1f, 1f, 1f);
+        case 1: //Masa pequeña
+        masimulador.masa = 0.3f;
+        masimulador.ActualizarMasita(masimulador.masa);
+        nuevaEscala = new Vector3(0.8f, 0.8f, 1f);
         break;
 
         case 2: //Masa grandota
         masimulador.masa = 10.0f;
+        masimulador.ActualizarMasita(masimulador.masa);
         nuevaEscala = new Vector3(1.5f, 1.5f, 1f);
         break;
     }
-    //Guardar posición antes de cambiar escala (para que no vuele)
-    Vector3 posactual = objetomasa.position;
+    
+    Vector3 posactual = objetomasa.position; //Guardar posición antes de cambiar escala (para que no vuele)
+    objetomasa.localScale = nuevaEscala; //aplicar la escala visual (todo esto para que no traspase el suelo)
+    float diferenciaAltura = nuevaEscala.y / 3f - objetomasa.localScale.y / 3f; //Calcular cuando cambió la altura (de nuevo para que no vuele XDDDD)
 
-    //aplicar la escala visual (todo esto para que no traspase el suelo)
-    objetomasa.localScale = nuevaEscala;
-
-    //Calcular cuando cambió la altura (de nuevo para que no vuele XDDDD)
-    float diferenciaAltura = nuevaEscala.y / 3f - objetomasa.localScale.y / 3f;
-
-    //Ajustar posición vertical(pa que no traspase el suelo)
+    //Ajustar posición 
     objetomasa.position = new Vector3(posactual.x, posactual.y + diferenciaAltura, posactual.z); //cambios en la posición en los 3 ejes
    }
 

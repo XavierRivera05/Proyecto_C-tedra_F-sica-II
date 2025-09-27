@@ -26,4 +26,11 @@ public class src_MASimulador : MonoBehaviour
         float x = amplitud * Mathf.Cos(omega * tiempo + fifi); //fórmula de posición
         transform.position = new Vector3(x, transform.position.y, 0); //actualizar pos del obj
     }
+
+    //actualizar el valor de la masa y actualizar frecuencia angular (funcion)
+    public void ActualizarMasita(float masaNueva) //se crea una nueva variable
+    {
+        masa = masaNueva;
+        omega = Mathf.Sqrt(k/masa);
+    }
 }

@@ -213,9 +213,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: "Masa peque\xF1a"
-      m_Image: {fileID: 0}
     - m_Text: Masa mediana
+      m_Image: {fileID: 0}
+    - m_Text: "Masa peque\xF1a"
       m_Image: {fileID: 0}
     - m_Text: Masa grande
       m_Image: {fileID: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Masa peque\xF1a"
+  m_Text: Masa mediana
 --- !u!222 &325790805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 347378037}
   - component: {fileID: 347378036}
   - component: {fileID: 347378035}
+  - component: {fileID: 347378038}
   m_Layer: 0
   m_Name: Obj_masa
   m_TagString: Untagged
@@ -786,6 +787,17 @@ Transform:
   m_Father: {fileID: 1165709287}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &347378038
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347378034}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
 --- !u!1 &362830792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1743,6 @@ GameObject:
   - component: {fileID: 1645653982}
   - component: {fileID: 1645653981}
   - component: {fileID: 1645653983}
-  - component: {fileID: 1645653984}
   m_Layer: 0
   m_Name: Obj_suelo_referencia
   m_TagString: Untagged
@@ -1815,32 +1826,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!61 &1645653984
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645653980}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1772327470
 GameObject:
   m_ObjectHideFlags: 0
