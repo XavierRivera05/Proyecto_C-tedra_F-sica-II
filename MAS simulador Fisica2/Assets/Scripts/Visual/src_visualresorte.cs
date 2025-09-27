@@ -7,18 +7,12 @@ public class src_visualresorte : MonoBehaviour
     //variables de tipo transform para colocar otros objetos como valor
     public Transform puntofijo;
     public Transform masita;
-    public LineRenderer resortevisual;
+    public LineRenderer resortevisual; //variable tipo componente
 
-    void Start()
-    {
-        //por el momento no añado nada aquí equisde
-    }
-
-    
     void Update()
     {
         int curva = 20; //número de curvas del resorte 
-        resortevisual.positionCount = curva;
+        resortevisual.positionCount = curva; //puntos de LineRenderer
 
         //configuración del Vector 3 (posicion visual)
         Vector3 start = puntofijo.position;
@@ -28,13 +22,13 @@ public class src_visualresorte : MonoBehaviour
 
         for (int i = 0; i < curva; i++)
         {
-            float tito = (float)i / (curva - 1);
-            Vector3 pos = Vector3.Lerp(start,end, tito);
+            float tito = (float)i / (curva - 1); //Normalizar entre 0 y 1
+            Vector3 pos = Vector3.Lerp(start,end, tito); //posición base
 
             //crear una "ondulación" con la función seno para simular un resorte chino
             pos += Vector3.Cross(direction, Vector3.forward) * Mathf.Sin(tito * Mathf.PI * 20) * 0.1f; //el pi sirve para los ciclos, y el 0.1f es amplitud
 
-            resortevisual.SetPosition(i, pos);
+            resortevisual.SetPosition(i, pos); //Asignar punto al componente
         }
     }
 }
