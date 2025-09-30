@@ -213,11 +213,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Masa mediana
+    - m_Text: Masa mediana(2kg)
       m_Image: {fileID: 0}
-    - m_Text: "Masa peque\xF1a"
+    - m_Text: "Masa peque\xF1a(0.5kg)"
       m_Image: {fileID: 0}
-    - m_Text: Masa grande
+    - m_Text: Masa grande(10kg)
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -958,7 +958,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Masa mediana
+  m_Text: Masa mediana(2kg)
 --- !u!222 &325790805
 CanvasRenderer:
   m_ObjectHideFlags: 0

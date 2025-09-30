@@ -23,13 +23,13 @@ public class src_cambiarmasa : MonoBehaviour
     switch (opcion)
     {
         case 0:  //Masa mediana
-        masimulador.masa = 1f; //cambiando valor de la masa (usando variable del otro script)
+        masimulador.masa = 2f; //cambiando valor de la masa (usando variable del otro script)
         masimulador.ActualizarMasita(masimulador.masa);
         nuevaEscala = new Vector3(1f, 1f, 1f); //dimensiones de la masa en los ejes + vector3 pa su posición
         break;
 
         case 1: //Masa pequeña
-        masimulador.masa = 0.3f;
+        masimulador.masa = 0.5f;
         masimulador.ActualizarMasita(masimulador.masa);
         nuevaEscala = new Vector3(0.8f, 0.8f, 1f);
         break;
