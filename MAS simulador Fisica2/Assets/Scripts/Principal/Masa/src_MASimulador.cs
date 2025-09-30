@@ -7,7 +7,7 @@ public class src_MASimulador : MonoBehaviour
       //variables principales (públicas y privadas)
     public float amplitud = 2f;
     public float masa = 1f;
-    public float k = 10f;
+    public float k = 5f;
     public float fifi = 0f;
     private float omega;
     private float tiempo;

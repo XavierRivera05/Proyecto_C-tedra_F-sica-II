@@ -8,10 +8,12 @@ public class src_cambiarmasa : MonoBehaviour
     public Dropdown menumasa; //en referencia a las tres opciones
     public src_MASimulador masimulador; //para script de la masa
     public Transform objetomasa; //"Transform" para colocar un objeto
+    public Dropdown menuconstante; //para la constante k y mostrar opciones
 
     void Start()
     {
-        menumasa.onValueChanged.AddListener(CambiarTipoDeMasa); //inicializar el evento de abajo "void"
+        menumasa.onValueChanged.AddListener(CambiarTipoDeMasa); //inicializar la función con respecto a la masa
+        menuconstante.onValueChanged.AddListener(CambiarRigidez); //constante elástica k
     }
 
    void CambiarTipoDeMasa(int opcion)
@@ -47,6 +49,24 @@ public class src_cambiarmasa : MonoBehaviour
 
     //Ajustar posición 
     objetomasa.position = new Vector3(posactual.x, posactual.y + diferenciaAltura, posactual.z); //cambios en la posición en los 3 ejes
+   }
+
+   //Para constante elástica
+   void CambiarRigidez(int opcionk)
+   {
+
+    switch(opcionk)
+    {
+        case 0: //Para resorte blando
+        masimulador.k = 5f;
+        break;
+
+        case 1: //Para resorte rígido
+        masimulador.k = 50f;
+        break;
+    }
+    //recaclular la fórmula
+    masimulador.ActualizarMasita(masimulador.masa); //misma para recalcular la frecuencia angular
    }
 
 }

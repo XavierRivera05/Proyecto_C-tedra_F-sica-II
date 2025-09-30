@@ -2018,6 +2018,7 @@ MonoBehaviour:
   menumasa: {fileID: 133053070}
   masimulador: {fileID: 347378035}
   objetomasa: {fileID: 347378037}
+  menuconstante: {fileID: 1615910617}
 --- !u!1 &1401452156
 GameObject:
   m_ObjectHideFlags: 0
