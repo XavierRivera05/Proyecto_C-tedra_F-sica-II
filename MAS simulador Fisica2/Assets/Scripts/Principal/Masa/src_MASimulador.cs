@@ -9,7 +9,7 @@ public class src_MASimulador : MonoBehaviour
     public float masa = 1f;
     public float k = 5f;
     public float fifi = 0f;
-    private float omega;
+    public float omega;
     private float tiempo;
     
     void Start()
