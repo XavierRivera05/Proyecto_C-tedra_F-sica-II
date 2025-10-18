@@ -33,4 +33,32 @@ public class src_MASimulador : MonoBehaviour
         masa = masaNueva;
         omega = Mathf.Sqrt(k/masa);
     }
+
+    //esto solo para el supuesto oscilograma (sino sirve se borra)
+    public float GetPosicion()
+    {
+        return amplitud * Mathf.Cos(omega * tiempo + fifi);
+    }
+
+    public float GetVelocidad()
+    {
+        return -amplitud * omega * Mathf.Sin(omega + tiempo + fifi);
+    }
+
+    public float GetEnergiaCinetica()
+    {
+        float v = GetVelocidad();
+        return 0.5f * masa * v * v;
+    }
+
+    public float GetEnergiaPotencial()
+    {
+        float x = GetPosicion();
+        return 0.5f * k * x * x;
+    }
+
+    public float GetEnergiaMecanica()
+    {
+        return 0.5f * k * amplitud * amplitud;
+    }
 }
