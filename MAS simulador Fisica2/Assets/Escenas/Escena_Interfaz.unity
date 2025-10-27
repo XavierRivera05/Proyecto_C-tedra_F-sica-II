@@ -706,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153, y: -194}
+  m_AnchoredPosition: {x: 188, y: -80}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554590904
@@ -729,7 +729,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFCu\xE1l es la f\xF3rmula principal?\n\nx(t) = A Cos(wt + \u03B8)\n"
+  m_text: "\xBFPor qu\xE9 es \xFAtil?\nPara entender la conservaci\xF3n\nde energ\xEDa
+    y el comportamiento\nde sistemas oscilatorios.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 216c8ef6259bea241b1411b09981766f, type: 2}
   m_sharedMaterial: {fileID: 2108319205525788033, guid: 216c8ef6259bea241b1411b09981766f, type: 2}
@@ -792,7 +793,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -174.37305, w: 0}
+  m_margin: {x: 0, y: 0, z: -159.8548, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -988,7 +989,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 811435320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c3dc3163ee01447a2787a572b13328, type: 3}
+  m_Script: {fileID: 11500000, guid: 29cedcb303497a641bccad870c8c3b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amplitud: 7
@@ -1102,6 +1103,7 @@ GameObject:
   - component: {fileID: 873477009}
   - component: {fileID: 873477008}
   - component: {fileID: 873477007}
+  - component: {fileID: 873477010}
   m_Layer: 5
   m_Name: Btn_salir
   m_TagString: Untagged
@@ -1224,6 +1226,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873477005}
   m_CullTransparentMesh: 1
+--- !u!114 &873477010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873477005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc0af4e742527e48b41bf5fde58d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escalaN: {x: 1, y: 1, z: 1}
+  escalaH: {x: 1.1, y: 1.1, z: 1}
+  velocidad: 5
 --- !u!1 &897371200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1627,7 @@ GameObject:
   - component: {fileID: 1385613727}
   - component: {fileID: 1385613726}
   - component: {fileID: 1385613725}
+  - component: {fileID: 1385613728}
   m_Layer: 5
   m_Name: Btn_acercade
   m_TagString: Untagged
@@ -1744,6 +1762,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385613723}
   m_CullTransparentMesh: 1
+--- !u!114 &1385613728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385613723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc0af4e742527e48b41bf5fde58d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escalaN: {x: 1, y: 1, z: 1}
+  escalaH: {x: 1.1, y: 1.1, z: 1}
+  velocidad: 5
 --- !u!1 &1499054672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1868,7 @@ GameObject:
   - component: {fileID: 1509194848}
   - component: {fileID: 1509194847}
   m_Layer: 5
-  m_Name: Txt_info_2 (1)
+  m_Name: Txt_info_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2080,6 +2113,7 @@ GameObject:
   - component: {fileID: 1709451941}
   - component: {fileID: 1709451940}
   - component: {fileID: 1709451939}
+  - component: {fileID: 1709451942}
   m_Layer: 5
   m_Name: Btn_salir
   m_TagString: Untagged
@@ -2213,6 +2247,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709451937}
   m_CullTransparentMesh: 1
+--- !u!114 &1709451942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709451937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc0af4e742527e48b41bf5fde58d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escalaN: {x: 1, y: 1, z: 1}
+  escalaH: {x: 1.1, y: 1.1, z: 1}
+  velocidad: 5
 --- !u!1 &1755113617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,6 +2783,7 @@ GameObject:
   - component: {fileID: 2039114832}
   - component: {fileID: 2039114831}
   - component: {fileID: 2039114830}
+  - component: {fileID: 2039114833}
   m_Layer: 5
   m_Name: Btn_iniciar
   m_TagString: Untagged
@@ -2856,3 +2906,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039114828}
   m_CullTransparentMesh: 1
+--- !u!114 &2039114833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039114828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc0af4e742527e48b41bf5fde58d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escalaN: {x: 1, y: 1, z: 1}
+  escalaH: {x: 1.2, y: 1.2, z: 1}
+  velocidad: 5
