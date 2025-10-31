@@ -17,8 +17,8 @@ public class src_MASimulador : MonoBehaviour
     
     void Start()
     {
-        omega = Mathf.Sqrt(k / masa); // Fórmula frecuencia angular con Mathf
-        tiempo = 0; // Inicializar el tiempo en 0s
+        omega = Mathf.Sqrt(k / masa); // fórmula frecuencia angular con Mathf
+        tiempo = 0; // inicializar el tiempo en 0s
         tiempoTotal = 0f;
     }
 
@@ -54,35 +54,35 @@ public class src_MASimulador : MonoBehaviour
         pausado = !pausado;
     }
 
-    // ========== FUNCIONES DE ENERGÍA ==========
+    //FUNCIONES DE ENERGÍA
     
-    // Obtener posición actual
+    //obtener posición actual
     public float GetPosicion()
     {
         return amplitud * Mathf.Cos(omega * tiempo + fifi);
     }
 
-    // Obtener velocidad actual (CORREGIDO)
+    // Obtener velocidad actual
     public float GetVelocidad()
     {
         return -amplitud * omega * Mathf.Sin(omega * tiempo + fifi);
     }
 
-    // Calcular energía cinética: Ec = (1/2) * m * v²
+    // Calcular energía cinética
     public float GetEnergiaCinetica()
     {
         float v = GetVelocidad();
         return 0.5f * masa * v * v;
     }
 
-    // Calcular energía potencial: Ep = (1/2) * k * x²
+    // Calcular energía potencial
     public float GetEnergiaPotencial()
     {
         float x = GetPosicion();
         return 0.5f * k * x * x;
     }
 
-    // Calcular energía mecánica total: Em = (1/2) * k * A²
+    // Calcular energía mecánica total
     public float GetEnergiaMecanica()
     {
         return 0.5f * k * amplitud * amplitud;
