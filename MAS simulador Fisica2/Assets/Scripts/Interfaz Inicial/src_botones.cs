@@ -15,4 +15,9 @@ public class src_botones : MonoBehaviour
         Debug.Log("Comprobar salir XD");
         Application.Quit();  //quitar la aplicación, funciona solo al exportar obviamente
     }
+
+    public void IrAlMenuPrincipal()
+    {
+        SceneManager.LoadScene("Escena_Interfaz");
+    }
 }
