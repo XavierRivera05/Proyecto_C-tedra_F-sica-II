@@ -18,4 +18,10 @@ public class src_zoomboton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData) => mouseEncima = true;
     public void OnPointerExit(PointerEventData eventData) => mouseEncima = false;
+
+    void OnDisable() //para que regrese al tamaño original al cambiar de panel
+    {
+        mouseEncima = false;
+        transform.localScale = escalaN;
+    }
 }
